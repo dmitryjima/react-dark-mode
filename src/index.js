@@ -4,9 +4,13 @@ import AppContainer from './common/containers/App';
 import './styles/_main.scss';
 import Routes from './routes';
 
+import ColorModeContextProvider from './context/colorModeContext';
+
 ReactDOM.render(
-  <AppContainer>
-    <Routes />
-  </AppContainer>,
+  <ColorModeContextProvider>
+    <AppContainer>
+      <Routes />
+    </AppContainer>
+  </ColorModeContextProvider>,
   document.getElementById('root')
 );
